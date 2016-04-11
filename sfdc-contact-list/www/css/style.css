@@ -1,0 +1,300 @@
+/* Copyright 2015 BlackBerry Ltd.
+
+ Licensed under the Apache License, Version 2.0 (the 'License');
+ you may not use this file except in compliance with the License.
+
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an 'AS IS' BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ express or implied. See the License for the specific language
+ governing permissions and limitations under the License.  */
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* selected users counter / clear button */
+
+.menu-counter {
+  color: #ccc;
+  font-style: italic;
+  font-size: 14px;
+}
+.selected-user-counter {
+  color: #ffffff !important;
+  float: left;
+  font-size: 21px;
+  margin-top: 8px;
+}
+.selected-user-clear {
+  color: #ffffff !important;
+  font-size: 26px !important;
+}
+
+/* search bar / clear button */
+
+.search-bar {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: -1px;
+}
+.icon-clear-search {
+  color: #f1f1f1 !important;
+  font-size: 26px !important;
+  margin-left: 10px;
+}
+
+/* about page */
+
+.about-description {
+  color: #333;
+}
+.about-description a {
+  color: #000000;
+  font-weight: 500;
+}
+
+/* profile */
+
+.profile-header {
+  background-color: #387EF5;
+  min-height: 9em;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.profile-header > .backgroundImage {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: 50% !important;
+  filter: blur(8px) grayscale(100%);
+  -webkit-filter: blur(8px) grayscale(60%);
+  /* this is weird because the filter causes an embossed effect on the image */
+  height: 125%;
+  width: 125%;
+  margin-left: -10%;
+}
+.profile-details-wrapper {
+  position: absolute;
+  bottom: 2em;
+  left: 3em;
+}
+.profile-header h2 {
+  color: #ffffff;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+.profile-header p {
+  color: #f1f1f1;
+}
+.contact-detail h2, .contact-detail p {
+  margin-left: 11px;
+}
+
+/* ionic overrides */
+
+
+/* modal close button */
+
+.modal-close-button {
+  color: #ffffff !important;
+}
+
+/* header bottom-gap override - fixes the gap when going for material look */
+
+.bar {
+  border-color: #387EF5;
+  background-color: #387EF5;
+  background-image: linear-gradient(0deg, #387EF5, #387EF5 49%, transparent 50%) !important;
+}
+.back-arrow {
+  position: absolute;
+  top: 0;
+  left: 0.2em;
+  font-size: 30px;
+  color: #ffffff !important;
+}
+.button-icon {
+  color: #9FA7B5;
+}
+
+/* stronger white text */
+
+.stronger {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* override card width for listview */
+
+.card {
+  margin: 0 0 10px 0!important;
+}
+
+/* make the border/divider 100% width */
+
+.card > .item {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* divider - no background colour, lighter border */
+
+.item-divider {
+  border-color: #e3e3e3;
+  background-color: #ffffff;
+  text-transform: capitalize;
+}
+.card > .item-divider {
+  padding: 10px !important;
+}
+
+/* login */
+
+.login-wrapper {
+  height: 101%;
+  background: url('../img/bg-login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.login-button {
+  position: absolute;
+  bottom: 2em;
+  width: 92% !important;
+  margin: 4%;
+}
+.login-msg {
+  text-align: center;
+  padding-top: 15%;
+  text-shadow: 2px 2px 4px #444444;
+}
+.login-msg h2 {
+  color: #ffffff;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+.login-msg p {
+  color: #f1f1f1;
+  font-size: 1.8em;
+  font-weight: 200;
+}
+
+/* sync */
+
+.sync-wrapper {
+  height: 101%;
+  width: 100%;
+  background: -webkit-linear-gradient(top, 0166bd 0%, #387EF5 100%);
+  background: linear-gradient(to bottom, #0166bd 0%, #387EF5 100%);
+  overflow: hidden;
+}
+.sync-icon {
+  margin: 20% auto;
+  font-size: 18em;
+  color: #f1f1f1;
+}
+.sync-spinner-msg {
+  position: relative;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 200;
+  text-align: center;
+}
+.sync-spinner {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  left: 46%;
+}
+.spinner svg {
+  margin-top: 4px;
+  width: 28px;
+  height: 28px;
+  fill: #ffffff;
+}
+
+/* side menu */
+
+
+/* big icon in sidemenu */
+
+.menu-icon {
+  position: absolute;
+  top: 0.2em;
+  right: 0;
+  left: 0;
+  margin: auto;
+  font-size: 10em;
+  color: #f1f1f1;
+}
+#custom-sidemenu .item {
+  border-color: #3A80CA;
+}
+#custom-sidemenu a {
+  color: #f1f1f1;
+  background-color: #116ccc;
+}
+#custom-sidemenu a i {
+  font-size: 25px;
+}
+.menu-header {
+  background: rgba(255, 255, 255, 0.15);
+  line-height: 32px;
+  padding: 8px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+ion-side-menu {
+  background-color: #116ccc !important;
+}
+.sidemenu-header {
+  height: 195px;
+  overflow: hidden;
+  text-align: center;
+  background: url('../img/bg-login-square.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sidemenu-header h1 {
+  position: relative;
+  margin-top: 158px;
+  color: #f1f1f1;
+  font-size: 18px;
+}
+
+/* fab button */
+
+.mfb-component__button--main, .mfb-component__button--child {
+  background-color: #0c63ee !important;
+}
+.bar-bb {
+  background-color: #0092cc;
+}
+.bb-blue {
+  background-color: #0092cc;
+}
+.bar-bb-blue {
+  background-color: #0092cc;
+}
+.bar-dark-grey {
+  background-color: #555;
+}
+.bar-dark-grey h1, .bar-bb h1 {
+  color: #f1f1f1;
+}
+
+/* fab overrides */
+
+.mfb-component__button--main, .mfb-component__button--child {
+  background-color: #0c63ee !important;
+}
+[data-mfb-label]:after {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
