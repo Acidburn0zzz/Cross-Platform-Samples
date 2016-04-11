@@ -1,0 +1,63 @@
+<!-- Copyright 2015 BlackBerry Ltd.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ express or implied. See the License for the specific language
+ governing permissions and limitations under the License. -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- content security policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; img-src *; script-src * 'unsafe-eval'; connect-src * 'self'">
+
+    <!-- styles -->
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="js/directives/ng-mfb/mfb.css" rel="stylesheet"/>
+    <link href="js/directives/ct-avatar-spinner/style.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- 3rd party libs -->
+    <script src="js/directives/ng-mfb/mfb.js"></script>
+    <script src="lib/underscore/underscore.min.js"></script>
+
+    <!-- controllers -->
+    <script src="js/AppCtrl.js"></script>
+    <script src="views/login/LoginCtrl.js"></script>
+    <script src="views/contacts/ContactsCtrl.js"></script>
+    <script src="views/contactProfile/ContactProfileCtrl.js"></script>
+    <script src="views/accounts/AccountsCtrl.js"></script>
+    <script src="views/accountProfile/AccountProfileCtrl.js"></script>
+    <script src="views/sync/SyncCtrl.js"></script>
+    <script src="views/about/AboutCtrl.js"></script>
+
+    <!-- services / libs -->
+    <script src="js/directives/ng-mfb/mfb.js"></script>
+    <script src="lib/underscore/underscore.min.js"></script>
+    <script src="js/directives/ct-avatar-spinner/ct-avatar-spinner.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/utils.js"></script>
+
+  </head>
+
+  <body ng-app="sfdcContacts">
+    <ion-nav-view></ion-nav-view>
+  </body>
+
+</html>

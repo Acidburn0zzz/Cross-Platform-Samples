@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Copyright 2015 BlackBerry Ltd.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ express or implied. See the License for the specific language
+ governing permissions and limitations under the License. -->
+
+<widget id="com.ctetreault.sfdccontacts" version="0.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>First Second Financial</name>
+  <description>
+    A proof of concept, salesforce contacts, application.
+  </description>
+  <author email="ctetreault@blackberry.com" href="http://www.blackberry.com/">
+    Chad Tetreault, BlackBerry Canada.
+  </author>
+  <content src="index.html"/>
+  <icon src="www/img/icon.png"/>
+
+  <access origin="*"/>
+  <access origin="tel:*" launch-external="yes"/>
+  <access origin="geo:*" launch-external="yes"/>
+  <access origin="mailto:*" launch-external="yes"/>
+  <access origin="sms:*" launch-external="yes"/>
+  <access origin="http://*" launch-external="yes"/>
+  <access origin="https://*" launch-external="yes"/>
+
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="android-minSdkVersion" value="16"/>
+  <preference name="BackupWebStorage" value="none"/>
+
+  <!-- android -->
+  <platform name="android">
+    <preference name="StatusBarBackgroundColor" value="#0166bd"/>
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios"></platform>
+
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+
+</widget>

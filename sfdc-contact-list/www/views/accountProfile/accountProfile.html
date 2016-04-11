@@ -1,0 +1,40 @@
+<!-- Copyright 2015 BlackBerry Ltd.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ express or implied. See the License for the specific language
+ governing permissions and limitations under the License. -->
+
+<ion-view title="" ng-controller="AccountProfileCtrl">
+  <ion-content>
+    <div class="profile-header">
+      <div class="profile-details-wrapper">
+        <h2 class="profile-title">{{currentAccount.Name}}</h2>
+        <p class="profile-sub-title">
+          <span class="stronger">{{currentAccount.BillingAddress.country}}</span>
+        </p>
+      </div>
+    </div>
+    <div class="item item-divider">
+      Contacts
+    </div>
+    <ion-list>
+      <ion-item collection-repeat="contact in currentAccount.Contacts.records | orderBy: 'LastName'" class="item-avatar-left item-icon-right" ng-click="viewContact(contact.idContact, $event)">
+        <div class="thumbnail-spinner-wrapper avatar-bg-{{contact.LastName.charAt(0)}}" ng-click="selectUser(contact, $event)">
+          <p class="thumbnail-label">{{ contact.FirstName.charAt(0) }}</p>
+          <i class="checkmark icon ion-ios-checkmark-empty"></i>
+        </div>
+        <h2>{{ contact.FirstName }}
+          {{ contact.LastName }}</h2>
+        <p>{{ contact.Title }}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

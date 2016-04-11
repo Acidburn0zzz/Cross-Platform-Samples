@@ -1,0 +1,71 @@
+<!-- Copyright 2015 BlackBerry Ltd.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ express or implied. See the License for the specific language
+ governing permissions and limitations under the License. -->
+
+<ion-view title="" ng-controller="ContactProfileCtrl">
+  <ion-content>
+
+    <!-- header -->
+    <div class="profile-header">
+      <div class="profile-details-wrapper">
+        <h2 class="profile-title">{{currentContact.FirstName}}
+          {{currentContact.LastName}}</h2>
+        <p class="profile-sub-title">{{ currentContact.Title }}
+          <span class="stronger">|</span>
+          <span class="stronger">
+            {{ currentContact.AccountName }}</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- contact card -->
+    <div class="card contact-card">
+      <div class="item item-text-wrap contact-list">
+        <!-- mobile phone -->
+        <ion-item class="contact-detail item-icon-left item-icon-right" ng-if="hasMobilePhone">
+          <a class="button button-icon icon ion-android-call" href="#" ng-click="phoneContact(currentContact.MobilePhone)"></a>
+          <h2 ng-click="phoneContact(currentContact.MobilePhone)">{{ currentContact.MobilePhone }}</h2>
+          <p>Mobile</p>
+          <a class="button button-icon icon ion-android-textsms" href="#" ng-click="smsContact(currentContact.MobilePhone)"></a>
+        </ion-item>
+        <!-- office phone -->
+        <ion-item class="contact-detail item-icon-left item-icon-right" ng-if="hasPhone">
+          <a class="button button-icon icon ion-android-call" href="#" ng-click="phoneContact(currentContact.Phone)"></a>
+          <h2 ng-click="phoneContact(currentContact.Phone)">{{ currentContact.Phone }}</h2>
+          <p>Office</p>
+          <a class="button button-icon icon ion-android-textsms" href="#" ng-click="smsContact(currentContact.Phone)"></a>
+        </ion-item>
+        <!-- email -->
+        <ion-item class="contact-detail item-icon-left" ng-if="hasEmail">
+          <a class="button button-icon icon ion-android-mail" href="#" ng-click="emailContact(currentContact.Email)"></a>
+          <h2 ng-click="emailContact(currentContact.Email)">{{ currentContact.Email }}</h2>
+          <p>Email</p>
+        </ion-item>
+      </div>
+    </div>
+    <div class="item item-divider">
+      {{ currentAccount.Name }}
+    </div>
+    <ion-list>
+      <ion-item collection-repeat="contact in currentAccount.Contacts.records | orderBy: 'LastName'" class="item-avatar-left item-icon-right" ng-click="viewContact(contact.idContact, $event)">
+        <div class="thumbnail-spinner-wrapper">
+          <p class="thumbnail-label">{{ contact.LastName.charAt(0) }}</p>
+          <i class="checkmark icon ion-ios-checkmark-empty"></i>
+        </div>
+        <h2>{{ contact.FirstName }}
+          {{ contact.LastName }}</h2>
+        <p>{{ contact.Title }}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
