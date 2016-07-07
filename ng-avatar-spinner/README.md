@@ -11,7 +11,7 @@ The directive creates an Array of objects, in my use-case it's Contacts, which c
 
 **Author**
 
-* [Chad Tetreault](http://www.twitter.com/chadtatro)
+* [Chad Tetreault](http://bit.ly/chadli123)
 
 **Demo**
 
